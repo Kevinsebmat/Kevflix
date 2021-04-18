@@ -1,0 +1,38 @@
+
+
+progress[value]::-webkit-progress-bar {
+    background-color: #555;
+}
+
+progress[value]::-webkit-progress-value {
+    background-color: #e50914;
+}
+
+
+.progress-bar-main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.progress-bar {
+    -webkit-appearance: none;
+    appearance: none;
+
+    width: 95%;
+    height: 4px;
+    cursor: pointer;
+}
+
+
+progress[value]::-webkit-progress-value::after {
+    content: '';
+    width: 56px;
+    height: 56px;
+        border-radius: 50%;
+    background-color: white;
+}

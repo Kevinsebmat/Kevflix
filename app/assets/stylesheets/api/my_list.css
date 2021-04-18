@@ -1,0 +1,40 @@
+
+
+
+
+
+.list-header {
+    margin-left: 70px;
+    margin-bottom: 50px;
+    font-size: 36px;
+    font-weight: 500;
+}
+.list-container {
+    margin-top: 90px;
+    width: 100%;
+    min-height: 90vh;
+}
+
+
+
+
+
+.no-movies-text {
+    font-size: 30px;
+}
+
+.no-movies-text-box {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 30px;
+    margin-left: 70px;
+}
+.my-list-main {
+    background-color: rgb(20, 20, 20);
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: space-between;
+}
+
+

@@ -1,0 +1,254 @@
+
+
+.watch-movie-container {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.watch-main {
+    color: white;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+
+
+.watch-movie {
+    height: 120%;
+    width: auto;
+} 
+
+.back-container {
+    width: 96%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 75px;
+}
+
+.back-small-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.back-button {
+    background-image: image-url("back");
+    background-size: cover;
+    height: 31px;
+    width: 35px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.watch-info-container {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.watch-controls-container {
+    width: 96%;
+    height: 120px;
+    margin-bottom: 10px;
+}
+
+.back-hover .back-button {
+    transition-property: height, width;
+    transition-duration: 300ms;
+    height: 35px;
+    width: 39px;
+}
+
+
+.back-hover .back-text {
+    transition-property: opacity, margin-left;
+    transition-duration: 300ms;
+
+    opacity: 1;
+    margin-left: 15px;
+}
+
+
+
+.back-text {
+    font-size: 22px;
+    color: white;
+    opacity: 0;
+    margin-left: 0;
+}
+
+
+
+
+.controls-bottom {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.controls-top {
+    height: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+
+.control-btns-right {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+
+.control-btns-left {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+
+.watch-title {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+
+.pause-btn {
+    background-image: image-url("pause");
+    background-size: cover;
+    height: 28px;
+    width: 14px;
+    cursor: pointer;
+    margin-right: 50px;
+    opacity: 0.7;
+}
+
+
+.pause-btn:hover {
+    opacity: 1;
+    height: 32px;
+    width: 16px;
+    transition-property: opacity, height, width;
+    transition-duration: 300ms;
+}
+
+
+
+
+
+.play-btn {
+    background-image: image-url("play");
+    background-size: cover;
+    height: 32px;
+    width: 24px;
+    cursor: pointer;
+    margin-right: 50px;
+    opacity: 0.7;
+}
+
+.watch-with-sound {
+    background-image: image-url("watch-with-sound");
+    background-size: cover;
+    height: 27px;
+    width: 27px;
+    cursor: pointer;
+    margin-right: 50px;
+    opacity: 0.7;
+}
+
+.play-btn:hover {
+    opacity: 1;
+    height: 36px;
+    width: 26px;
+    transition-property: opacity, height, width;
+    transition-duration: 300ms;
+}
+
+
+
+.watch-sound-off {
+    background-image: image-url("watch-sound-off");
+    background-size: cover;
+    height: 27px;
+    width: 27px;
+    cursor: pointer;
+    margin-right: 50px;
+    opacity: 0.7;
+}
+
+.watch-with-sound:hover {
+    opacity: 1;
+    height: 30px;
+    width: 30px;
+    transition-property: opacity, height, width;
+    transition-duration: 300ms;
+}
+
+
+
+
+
+
+
+.fullscreen-btn {
+    background-image: image-url("fs");
+    background-size: cover;
+    height: 24px;
+    width: 40px;
+    margin-top: 3px;
+    margin-left: 40px;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.fade-controls .watch-info-container {
+    cursor: none;
+
+    opacity: 0;
+    transition: 3000ms ease;
+    transition-property: opacity;
+}
+
+
+.watch-sound-off:hover {
+    opacity: 1;
+    height: 30px;
+    width: 30px;
+    transition-property: opacity, height, width;
+    transition-duration: 300ms;
+}
+.fullscreen-btn:hover {
+    transition-property: opacity, height, width;
+    transition-duration: 300ms;
+    height: 27px;
+    width: 45px;
+    opacity: 1;
+}
+
+
+
