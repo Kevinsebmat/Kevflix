@@ -26,7 +26,7 @@ class Feature extends React.Component {
     }
 
     addMovieToList() {
-        const featuredMovie = Object.values(this.props.genres[1][1])[0];
+        const featuredMovie = Object.values(this.props.genres[0][1])[0];
 
         const listMovieInfo = {
             list_id: this.props.profileList.id,
@@ -45,7 +45,7 @@ class Feature extends React.Component {
         if (!genres[0]) return (<div></div>);
 
         const { muted } = this.state;
-        const featuredMovie = Object.values(genres[1][1])[0];
+        const featuredMovie = Object.values(genres[0][1])[0];
 
         const title = featuredMovie.title.toUpperCase();
                 const trailer = featuredMovie.trailer;
