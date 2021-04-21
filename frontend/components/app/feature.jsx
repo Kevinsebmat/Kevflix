@@ -47,6 +47,8 @@ class Feature extends React.Component {
         const { muted } = this.state;
         const featuredMovie = Object.values(genres[0][1])[0];
 
+        // genres[1][1])[0];
+
         const title = featuredMovie.title.toUpperCase();
                 const trailer = featuredMovie.trailer;
         const rating = featuredMovie.maturity_rating ? featuredMovie.maturity_rating : featuredMovie.maturityRating;
