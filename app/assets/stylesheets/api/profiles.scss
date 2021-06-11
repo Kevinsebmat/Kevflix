@@ -188,8 +188,8 @@
 .delete-btn {
     background-image: image-url("x");
     background-size: cover;
-    height: 30px;
-    width: 30px;
+    height: 35px;
+    width: 35px;
     cursor: pointer;
 }
 
@@ -300,9 +300,8 @@
     text-align: center;
 }
 
-
 .gradient-1 {
-    background: linear-gradient(0deg, rgb(88, 207, 171) 0%, rgba(49,107,212,1) 40%);
+    background: linear-gradient(0deg, rgb(167, 34, 34) 0%, rgb(63, 55, 55) 40%);
 }
 
 .gradient-2 {
@@ -310,13 +309,13 @@
 }
 
 .gradient-3 {
-    background: linear-gradient(0deg, rgb(140, 206, 119) 0%, rgba(7,163,41,1) 40%);
+    background: linear-gradient(0deg, rgb(100, 99, 122) 0%, rgba(7,163,41,1) 40%);
 }
 
 .gradient-4 {
-    background: linear-gradient(0deg, rgb(109, 231, 146) 0%, rgba(14,7,163,1) 40%);
+    background: linear-gradient(0deg, rgb(212, 157, 210) 0%, rgba(14,7,163,1) 40%);
 }
 
 .gradient-5 {
-    background: linear-gradient(0deg, rgba(231,211,109,1) 0%, rgba(163,138,7,1) 40%);
+    background: linear-gradient(0deg, rgba(231,211,109,1) 0%, rgb(221, 187, 17) 40%);
 }

@@ -18,15 +18,15 @@
 
 
 
-.moviescrolling-wrapper {
+// .moviescrolling-wrapper {
 
-    display: flex;
-    align-items: center;
-    width: 95%;
-    overflow-x: hidden;
-    margin: 0 10px 5px 10px;
-    position: relative;
-}
+//     display: flex;
+//     align-items: center;
+//     width: 95%;
+//     overflow-x: hidden;
+//     margin: 0 10px 5px 10px;
+//     position: relative;
+// }
 
 .movies-container {
     display: flex;
@@ -36,38 +36,84 @@
 }
 
 
-.moviescrolling-left {
-    cursor: pointer;
-    background-image: image-url("scroll-left-white");
-    height: 55px;
-    width: 16px;
-}
+// .moviescrolling-left {
+//     cursor: pointer;
+//     background-image: image-url("scroll-left-white");
+//     height: 55px;
+//     width: 16px;
+// }
 
 .unhidden {
     visibility: visible;
 }
 
 
-.moviescrolling {
+// .moviescrolling {
+//     display: flex;
+//     transition: 1s ease all; 
+//     align-items: center;
+// }
+// .moviescrolling-left:hover {
+//     background-image: image-url("scroll-left-red");
+// }
+
+
+
+// .moviescrolling-right:hover {
+//     background-image: image-url("scroll-right-red");
+//     cursor: pointer;
+// }
+
+
+
+// .moviescrolling-right {
+//     background-image: image-url("scroll-right-white");
+//     height: 55px;
+//     width: 16px;
+// }
+.carousel-wrapper {
+
+    display: flex;
+    align-items: center;
+    width: 95%;
+    overflow-x: hidden;
+    margin: 0 10px 5px 10px;
+    position: relative;
+}
+
+
+
+.carousel-left {
+    cursor: pointer;
+    background-image: image-url("scroll-left-white");
+    height: 55px;
+    width: 16px;
+}
+
+.carousel {
     display: flex;
     transition: 1s ease all; 
     align-items: center;
 }
-.moviescrolling-left:hover {
+.unhidden {
+    visibility: visible;
+}
+
+.carousel-left:hover {
     background-image: image-url("scroll-left-red");
 }
 
+.carousel-right {
+    background-image: image-url("scroll-right-white");
+    height: 55px;
+    width: 16px;
+}
 
-
-.moviescrolling-right:hover {
+.carousel-right:hover {
     background-image: image-url("scroll-right-red");
     cursor: pointer;
 }
 
-
-
-.moviescrolling-right {
-    background-image: image-url("scroll-right-white");
-    height: 55px;
-    width: 16px;
+.invisible {
+    visibility: hidden;
 }

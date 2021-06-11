@@ -182,7 +182,7 @@
 
 
 .remove-movie-btn {
-    background-image: image-url("add-title");
+    background-image: image-url("x");
     background-size: cover;
     height: 36px;
     width: 36px;
@@ -211,7 +211,7 @@
 }
 
 .sound-btn-on {
-    background-image: image-url("no-sound");
+    background-image: image-url("sound");
     background-size: cover;
     height: 36px;
     width: 36px;
@@ -219,7 +219,7 @@
 
 
 .sound-btn-off:hover {
-    background-image: image-url("no-sound");
+    background-image: image-url("sound");
 }
 
 
@@ -345,7 +345,37 @@
 }
 
 
-.movie-preview-inactive:hover .scroll-down {
+// .movie-preview-inactive:hover .scroll-down {
+//     transition: 500ms ease all;
+//     transform: translate(0, 20px);
+//     opacity: 1;
+// }
+
+.preview-chev-down {
+    background-image: image-url("chev-down-white");
+    background-size: cover;
+    height: 16px;
+    width: 55px;
+}
+
+.preview-show-link:hover .preview-chev-down {
+    background-image: image-url("chev-down-red");
+}
+
+
+.chev-down {
+    background-image: image-url("chev-down-white");
+    background-size: cover;
+    position: absolute;
+    height: 16px;
+    width: 55px;
+
+    visibility: hidden;
+    opacity: 0;
+    margin-top: 80px;
+}
+
+.movie-preview-inactive:hover .chev-down {
     transition: 500ms ease all;
     transform: translate(0, 20px);
     opacity: 1;

@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../footer";
 import { Link } from "react-router-dom";
 import NavContainer from "../nav_container";
 
@@ -73,7 +74,7 @@ class LoginForm extends React.Component {
                         </form>
                     </div>
                 </div>
-               
+                  <Footer />
             </main>
             
         )

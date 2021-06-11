@@ -49,6 +49,7 @@ class MovieShow extends React.Component {
         const listMovieAssociations = this.props.profileList.movieAssociations;
         const maturity_rating = this.props.details.maturity_rating ? this.props.details.maturity_rating : this.props.details.maturityRating;
         
+        const trailer = this.props.details.trailer ? this.props.details.trailer : window.backupTrailerURL;
 
 
         

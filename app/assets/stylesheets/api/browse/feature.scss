@@ -155,7 +155,7 @@
 
 
 .feature-mute-on {
-    background-image: image-url("no-sound");
+    background-image: image-url("sound");
     background-size: cover;
     height: 36px;
     width: 36px;
@@ -169,7 +169,7 @@
 
 
 .feature-mute-off:hover {
-    background-image: image-url("no-sound");
+    background-image: image-url("sound");
     cursor: pointer;
 }
 .feature-mute-on:hover {

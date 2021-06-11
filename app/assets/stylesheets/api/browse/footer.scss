@@ -1,0 +1,61 @@
+.footer-main {
+    background-color: rgb(20, 20, 20);
+    display: flex;
+    border-top: 3px solid #333;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.footer-text {
+    color: rgb(214, 60, 60);
+    font: ariel-serif;
+    font-size: 14px;
+    margin-left: 30px;
+}
+
+.footer-right {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    padding-right: 20px;
+}
+
+.footer-link {
+    margin: 15px 10px 20px 10px;
+}
+
+
+.linkedin-icon {
+    background-image: image-url("linkedin-icon");
+    background-size: cover;
+    height: 40px;
+    width: 40px;
+}
+
+.linkedin-icon:hover {
+    opacity: 0.8;
+}
+.angelist {
+    background-image: image-url("angelist");
+    background-size: cover;
+    height: 40px;
+    width: 40px;
+}
+
+.angelist:hover {
+    opacity: 0.8;
+}
+.github-icon {
+    background-image: image-url("github-icon");
+    background-size: cover;
+    height: 40px;
+    width: 40px;
+}
+
+.github-icon:hover {
+    opacity: 0.8;
+}

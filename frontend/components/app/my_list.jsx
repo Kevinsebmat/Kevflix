@@ -1,5 +1,6 @@
 import React from "react";
 import MovieRow from "./movie_row";
+import Footer from "../footer";
 
 import Nav from "../nav_container";
 import { Link } from "react-router-dom";
@@ -79,7 +80,7 @@ class MyList extends React.Component {
                         {listRows}
                     </div>
                 </div>
-                
+                <Footer />
             </div>
         )
     }

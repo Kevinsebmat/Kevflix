@@ -13,29 +13,26 @@ class MovieRow extends React.Component {
             toggle: false
         }
 
+        this.showRightArrow = false;
         this.showLeftArrow = false;
         this.transitioning = false;
-        this.showRightArrow = false;
 
+        this.closeShow = this.closeShow.bind(this);
         this.setActiveMovie = this.setActiveMovie.bind(this);
-                this.closeShow = this.closeShow.bind(this);
+        this.shiftBack = this.shiftBack.bind(this);
         this.shiftForward = this.shiftForward.bind(this);
         this.updateToggle = this.updateToggle.bind(this);
+        this.switchOnTransition = this.switchOnTransition.bind(this);
         this.switchOffTransition = this.switchOffTransition.bind(this);
         this.stopHoverPropagation = this.stopHoverPropagation.bind(this);
-                this.shiftBack = this.shiftBack.bind(this);
-
-        this.switchOnTransition = this.switchOnTransition.bind(this);
-
-
     }
 
     componentDidMount() {
         this.mounted = true;
         this.updateRightArrow();
 
-        const moviescrolling = document.getElementById(`${this.props.name}-moviescrolling`);
-        moviescrolling.addEventListener("transitionstart", this.switchOnTransition);
+        const carousel = document.getElementById(`${this.props.name}-carousel`);
+        carousel.addEventListener("transitionstart", this.switchOnTransition);
     }
 
     componentWillUnmount() {
@@ -47,9 +44,6 @@ class MovieRow extends React.Component {
             this.props.history.push(`/browse/${movie.id}`)
         }
 
-
-
-
         this.setState({
             activeMovie: movie,
             activeRow: true
@@ -57,24 +51,22 @@ class MovieRow extends React.Component {
     }
 
     shiftForward() {
-        const moviescrolling = document.getElementById(`${this.props.name}-moviescrolling`);
         const wrapper = document.getElementById(`${this.props.name}-wrapper`);
+        const carousel = document.getElementById(`${this.props.name}-carousel`);
         
-        const shiftLength = (moviescrolling.offsetWidth - wrapper.offsetWidth) * -1;
+        const shiftLength = (carousel.offsetWidth - wrapper.offsetWidth) * -1;
 
         if (shiftLength < 0) {
-            moviescrolling.style.transform = `translateX(${shiftLength + "px"})`;
+            carousel.style.transform = `translateX(${shiftLength + "px"})`;
             this.showRightArrow = false;
             this.showLeftArrow = true;
             this.updateToggle();
         }
     }
 
-
-
     shiftBack() {
-        const moviescrolling = document.getElementById(`${this.props.name}-moviescrolling`);
-        moviescrolling.style.transform ="";
+        const carousel = document.getElementById(`${this.props.name}-carousel`);
+        carousel.style.transform ="";
 
         this.showRightArrow = true;
         this.showLeftArrow = false;
@@ -93,12 +85,9 @@ class MovieRow extends React.Component {
     }
 
     updateRightArrow() {
-        const moviescrolling = document.getElementById(`${this.props.name}-moviescrolling`);
-
-
         const wrapper = document.getElementById(`${this.props.name}-wrapper`);
-
-        const shiftLength = (moviescrolling.offsetWidth - wrapper.offsetWidth) * -1;
+        const carousel = document.getElementById(`${this.props.name}-carousel`);
+        const shiftLength = (carousel.offsetWidth - wrapper.offsetWidth) * -1;
 
         this.showRightArrow = shiftLength < 0;
         this.setState({toggle: !this.state.toggle})
@@ -113,7 +102,7 @@ class MovieRow extends React.Component {
     }
 
     switchOnTransition(event) {
-        if (event.srcElement.id.includes("moviescrolling")) {
+        if (event.srcElement.id.includes("carousel")) {
             this.transitioning = true;
         } 
     }
@@ -129,6 +118,7 @@ class MovieRow extends React.Component {
         const { activeRow, activeMovie } = this.state;
         let movieItems = [];   
         
+        // Create individual movies 
         for (let [title, details] of movies) {
             let activeStatus;
             if (activeMovie) {
@@ -140,9 +130,8 @@ class MovieRow extends React.Component {
             const movieItem = (
                 <MovieContainer key={details.id} 
                     title={title} 
-                   
+                    details={details} 
                     activeRow={activeRow}
-                     details={details} 
                     activeMovie={activeStatus}
                     setActiveMovie={this.setActiveMovie}
                     inProfileListRow={inProfileListRow}
@@ -151,6 +140,7 @@ class MovieRow extends React.Component {
             movieItems.push(movieItem)
         }
 
+        // Create movie show section, if row is active
         let movieShow;
         if (activeRow) {
             movieShow = (
@@ -158,24 +148,22 @@ class MovieRow extends React.Component {
             )
         }
 
+        // Determine appropriate arrows and hide genre title if on My List page
+        let titleDiv;
         let rightArrow;
         let leftArrow;
-        let titleDiv;
-
-
-
 
         if (!this.props.hideTitle) titleDiv=(<h2 className="genre-title" >{name}</h2>)
         if (!this.props.hideTitle && this.showRightArrow) {
-            rightArrow=(<div className="moviescrolling-right" onClick={this.shiftForward}></div>)
+            rightArrow=(<div className="carousel-right" onClick={this.shiftForward}></div>)
         } else {
-            rightArrow=(<div className="moviescrolling-right invisible" onClick={this.shiftForward}></div>)
+            rightArrow=(<div className="carousel-right invisible" onClick={this.shiftForward}></div>)
         }
 
         if (this.showLeftArrow) {
-            leftArrow = (<div id={`${name}-moviescrolling-btn`} className="moviescrolling-left" onClick={this.shiftBack}></div>);
+            leftArrow = (<div id={`${name}-carousel-btn`} className="carousel-left" onClick={this.shiftBack}></div>);
         } else {
-            leftArrow = (<div id={`${name}-moviescrolling-btn`} className="moviescrolling-left invisible" onClick={this.shiftBack}></div>);
+            leftArrow = (<div id={`${name}-carousel-btn`} className="carousel-left invisible" onClick={this.shiftBack}></div>);
         }
 
         return (
@@ -183,8 +171,8 @@ class MovieRow extends React.Component {
                 {titleDiv}
                 <div className="movies-container" onMouseEnter={this.stopHoverPropagation}>
                     {leftArrow}                    
-                    <div id={`${name}-wrapper`} className="moviescrolling-wrapper">
-                        <div id={`${name}-moviescrolling`} onTransitionEnd={this.switchOffTransition}  className="moviescrolling">
+                    <div id={`${name}-wrapper`} className="carousel-wrapper">
+                        <div id={`${name}-carousel`} onTransitionEnd={this.switchOffTransition}  className="carousel">
                             {movieItems}
                         </div>
                     </div>
