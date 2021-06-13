@@ -12,6 +12,6 @@ local:
 amazon_prod:
   service: S3
   access_key_id: <%= ENV['ID'] %>
-  secret_access_key: <%= ENV['KEY'] %>
+  secret_access_key: <%= ENV['MYKEY'] %>
   region: us-west-2
   bucket: kevflix
