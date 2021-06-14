@@ -4,6 +4,8 @@ Kevflix is a video content platform clone of the site, Netflix. It is built with
 
 ![02](https://user-images.githubusercontent.com/65047030/121826752-59344a00-cc6e-11eb-81f9-f695a6678d54.gif)
 
+![03](https://user-images.githubusercontent.com/65047030/121865570-f913c700-ccb2-11eb-967f-3fe09590a4f7.png)
+
 Features
 ___________________________________________________________________________________________________________________________________________________________
 - Back and front end User authentication
