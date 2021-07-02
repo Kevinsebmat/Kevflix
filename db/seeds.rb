@@ -269,7 +269,7 @@ genre_id: trending.id
 
 movie16.trailer.attach(io: open("https://kevflix.s3.us-west-2.amazonaws.com/Army+of+the+Dead++Official+Trailer.mp4"), filename: "army_of_the_dead.mp4")
 movie16.thumbnail.attach(io: open("https://www.ewrestlingnews.com/wp-content/uploads/2021/05/dave-bautista-army-of-the-dead.jpg"), filename: "justice-league_thumbnail.jpg")
-movie16.logo.attach(io: open("https://image.tmdb.org/t/p/w500//9WlJFhOSCPnaaSmsrv0B4zA8iUb.jpg"), filename: "justice-league_logo.png")
+movie16.logo.attach(io: open("https://www.ewrestlingnews.com/wp-content/uploads/2021/05/dave-bautista-army-of-the-dead.jpg"), filename: "justice-league_logo.png")
 
 
 movie17 = Movie.create!({
