@@ -5,18 +5,25 @@
     height: 168px;
     width: 300px;
 
-    overflow: hidden;
+    // overflow: hidden;
 }
 
 
 
 .movie-main {
-    flex-shrink: 0;
+    // padding: 20px;
+    flex-basis: 0;
     margin-right: 5px;
+    // margin-left: 500px;
+    // width: 320px;
+    display: flex;
+    align-items: left;
+    position: relative;
 }
 
 .movie-preview-default:hover {
     animation: 1000ms ease 0s 1 normal both running zoom;
+    
     
 }
 
@@ -80,7 +87,8 @@
         height: 280px;
         width: 500px;
 
-
+//  height: 280px;
+//         width: 500px;
         //  width: 310px;
         
 
