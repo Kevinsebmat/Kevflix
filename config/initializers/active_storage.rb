@@ -1,1 +1,1 @@
-ActiveStorage::Service.url_expires_in = 1.hour
+# ActiveStorage::Service.url_expires_in = 1.hour
